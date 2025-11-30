@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuralVerse AI - Future of Intelligence</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; overflow-x: hidden; background: #000; color: #fff; }
+        #canvas3d { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+        nav { position: fixed; top: 0; width: 100%; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; background: rgba(0,0,0,0.3); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .logo { font-size: 28px; font-weight: bold; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 2px; }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { color: #fff; text-decoration: none; font-size: 16px; transition: all 0.3s; }
+        .nav-links a:hover { color: #667eea; }
+        .hero { position: relative; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 20px; z-index: 1; }
+        .hero h1 { font-size: 80px; font-weight: 900; margin-bottom: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: fadeInUp 1s ease-out; }
+        .hero p { font-size: 24px; margin-bottom: 40px; color: #ccc; animation: fadeInUp 1s ease-out 0.2s backwards; max-width: 800px; }
+        .cta-buttons { display: flex; gap: 20px; animation: fadeInUp 1s ease-out 0.4s backwards; }
+        .btn { padding: 18px 40px; font-size: 18px; border: none; border-radius: 50px; cursor: pointer; transition: all 0.3s; font-weight: 600; text-decoration: none; display: inline-block; }
+        .btn-primary { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; box-shadow: 0 10px 30px rgba(102,126,234,0.4); }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(102,126,234,0.6); }
+        .btn-secondary { background: transparent; color: #fff; border: 2px solid #667eea; }
+        .btn-secondary:hover { background: rgba(102,126,234,0.1); transform: translateY(-3px); }
+        .features { position: relative; padding: 100px 50px; z-index: 1; background: rgba(0,0,0,0.5); }
+        .features h2 { text-align: center; font-size: 50px; margin-bottom: 80px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto; }
+        .feature-card { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 40px; transition: all 0.3s; cursor: pointer; }
+        .feature-card:hover { transform: translateY(-10px); background: rgba(255,255,255,0.08); box-shadow: 0 20px 60px rgba(102,126,234,0.3); }
+        .feature-icon { font-size: 50px; margin-bottom: 20px; }
+        .feature-card h3 { font-size: 24px; margin-bottom: 15px; color: #667eea; }
+        .feature-card p { color: #aaa; line-height: 1.6; }
+        footer { position: relative; padding: 40px; text-align: center; background: rgba(0,0,0,0.8); border-top: 1px solid rgba(255,255,255,0.1); z-index: 1; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @media (max-width: 768px) { .hero h1 { font-size: 50px; } .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+    <canvas id="canvas3d"></canvas>
+    <nav>
+        <div class="logo">NeuralVerse</div>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    <section class="hero">
+        <h1>The Future of AI is Here</h1>
+        <p>Harness the power of next-generation artificial intelligence to transform your business</p>
+        <div class="cta-buttons">
+            <a href="#" class="btn btn-primary">Get Started</a>
+            <a href="#" class="btn btn-secondary">Watch Demo</a>
+        </div>
+    </section>
+    <section class="features" id="features">
+        <h2>Powerful AI Capabilities</h2>
+        <div class="feature-grid">
+            <div class="feature-card"><div class="feature-icon">🧠</div><h3>Neural Networks</h3><p>Advanced deep learning models that adapt and evolve with your data.</p></div>
+            <div class="feature-card"><div class="feature-icon">⚡</div><h3>Lightning Fast</h3><p>Process millions of data points in milliseconds.</p></div>
+            <div class="feature-card"><div class="feature-icon">🔒</div><h3>Enterprise Security</h3><p>Bank-level encryption and global security compliance.</p></div>
+            <div class="feature-card"><div class="feature-icon">🎯</div><h3>Precision Analytics</h3><p>99.9% accuracy through state-of-the-art ML algorithms.</p></div>
+            <div class="feature-card"><div class="feature-icon">🌐</div><h3>Global Scale</h3><p>Deploy across 50+ countries with multi-language support.</p></div>
+            <div class="feature-card"><div class="feature-icon">🤖</div><h3>AutoML</h3><p>Automated machine learning without data science expertise.</p></div>
+        </div>
+    </section>
+    <footer><p>&copy; 2025 NeuralVerse AI. Powered by Bhindi.</p></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        const canvas=document.getElementById('canvas3d'),scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000),renderer=new THREE.WebGLRenderer({canvas,alpha:!0,antialias:!0});renderer.setSize(window.innerWidth,window.innerHeight);renderer.setPixelRatio(window.devicePixelRatio);const particlesGeometry=new THREE.BufferGeometry(),particlesCount=5000,posArray=new Float32Array(particlesCount*3);for(let i=0;i<particlesCount*3;i++)posArray[i]=(Math.random()-0.5)*100;particlesGeometry.setAttribute('position',new THREE.BufferAttribute(posArray,3));const particlesMaterial=new THREE.PointsMaterial({size:0.05,color:0x667eea,transparent:!0,opacity:0.8,blending:THREE.AdditiveBlending}),particlesMesh=new THREE.Points(particlesGeometry,particlesMaterial);scene.add(particlesMesh);const geometry=new THREE.TorusKnotGeometry(10,3,100,16),material=new THREE.MeshBasicMaterial({color:0x764ba2,wireframe:!0,transparent:!0,opacity:0.3}),torusKnot=new THREE.Mesh(geometry,material);scene.add(torusKnot);camera.position.z=30;let mouseX=0,mouseY=0;document.addEventListener('mousemove',e=>{mouseX=(e.clientX/window.innerWidth)*2-1;mouseY=-(e.clientY/window.innerHeight)*2+1});function animate(){requestAnimationFrame(animate);particlesMesh.rotation.y+=0.001;particlesMesh.rotation.x+=0.0005;torusKnot.rotation.x+=0.005;torusKnot.rotation.y+=0.005;camera.position.x+=(mouseX*5-camera.position.x)*0.05;camera.position.y+=(mouseY*5-camera.position.y)*0.05;camera.lookAt(scene.position);renderer.render(scene,camera)}animate();window.addEventListener('resize',()=>{camera.aspect=window.innerWidth/window.innerHeight;camera.updateProjectionMatrix();renderer.setSize(window.innerWidth,window.innerHeight)});
+    </script>
+</body>
+</html>
